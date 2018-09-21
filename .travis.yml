@@ -1,0 +1,10 @@
+language: ruby
+cache:
+- bundler
+rvm:
+  - 2.5.1
+before_install: gem install bundler -v 1.16.4
+script:
+- gem build sensu-plugins-vsphere.gemspec
+- gem install sensu-plugins-vsphere-*.gem
+- bundle exec rake default

@@ -1,0 +1,36 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+  TargetRubyVersion: 2.5
+
+Documentation:
+  Enabled: false
+
+DotPosition:
+  EnforcedStyle: trailing
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/MethodLength:
+  Max: 25
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'config/environments/*.rb'
+    - 'config/routes.rb'
+
+
