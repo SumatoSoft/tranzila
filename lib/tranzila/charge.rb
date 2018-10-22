@@ -6,6 +6,8 @@ module Tranzila
         TranzilaTK
         sum
         currency
+        cred_type
+        tranmode
       ].freeze
     end
 
@@ -19,7 +21,7 @@ module Tranzila
     def call
       result = URI.decode_www_form(request).to_h
       if result['Response'].nil?
-        raise('token wasn\'t be sent')
+        raise('token wasn\'t sent')
       elsif result['Response'] != '000'
         raise(RESPONSE_MESSAGES[result['Response']])
       end

@@ -3,6 +3,7 @@ require 'tranzila/base'
 require 'tranzila/charge'
 require 'tranzila/token'
 require 'tranzila/refund'
+require 'tranzila/url'
 require 'tranzila/version'
 
 module Tranzila
