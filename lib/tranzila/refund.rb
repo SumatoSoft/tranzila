@@ -7,7 +7,7 @@ module Tranzila
       if result['Response'].nil?
         raise('Something went wrong')
       elsif result['Response'] != '000'
-        raise(RESPONSE_MESSAGES[result['Response']])
+        raise(I18n.t(result['Response']))
       end
       result
     end
