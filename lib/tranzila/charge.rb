@@ -21,9 +21,9 @@ module Tranzila
     def call
       result = URI.decode_www_form(request).to_h
       if result['Response'].nil?
-        raise('token wasn\'t sent')
+        raise('Something went wrong')
       elsif result['Response'] != '000'
-        raise(RESPONSE_MESSAGES[result['Response']])
+        raise(I18n.t(result['Response']))
       end
       result
     end

@@ -107,7 +107,7 @@ describe 'Tranzila::Charge' do
       it 'returns correct token' do
         expect do
           @charge.call
-        end.to raise_error('token wasn\'t be sent')
+        end.to raise_error('Something went wrong')
       end
     end
   end
