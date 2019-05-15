@@ -22,8 +22,6 @@ module Tranzila
       result = URI.decode_www_form(request).to_h
       if result['Response'].nil?
         raise('Something went wrong')
-      elsif result['Response'] != '000'
-        raise(I18n.t(result['Response']))
       end
       result
     end
