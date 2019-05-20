@@ -28,6 +28,9 @@ module Tranzila
       url = URI(base_url)
       responce = Net::HTTP.post_form(url, @params)
       raise('Something went wrong') if responce.code != '200'
+      doc = Nokogiri::HTML(responce.body)
+      message = doc.css('[color="red"]').first&.text
+      raise(message) if message
       responce.body
     end
   end
