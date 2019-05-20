@@ -5,7 +5,6 @@ require 'tranzila/token'
 require 'tranzila/refund'
 require 'tranzila/url'
 require 'tranzila/version'
-require 'i18n'
 
 module Tranzila
   def self.configuration

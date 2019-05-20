@@ -10,9 +10,15 @@ module Tranzila
       options.each do |key, value|
         config.send("#{key}=", value)
       end
+    end
 
-      I18n.load_path << Dir[File.expand_path('./config/locales/**/*.yml')]
-      I18n.available_locales = %i[en he]
+    def self.translations
+      @translations = {}
+      Dir[Rails.root.join('config', 'locales', 'tranzila', '**/*.{rb,yml}').to_s].each do |filename|
+        @translations = @translations.merge(YAML.load_file(filename))
+      end
+
+      @translations
     end
   end
 end
