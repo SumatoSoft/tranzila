@@ -4,7 +4,7 @@ module Tranzila
   class Config
     include ::ActiveSupport::Configurable
 
-    config_accessor :supplier, :tranzila_pw, :end_point, :credit_pass
+    config_accessor :supplier, :tranzila_pw, :end_point, :credit_pass, :supplier_terminal
 
     def initialize(options = {})
       options.each do |key, value|

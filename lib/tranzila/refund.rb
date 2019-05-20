@@ -25,7 +25,7 @@ module Tranzila
 
     def default_params
       {
-        supplier: Tranzila.configuration.supplier,
+        supplier: Tranzila.configuration.supplier_terminal,
         TranzilaPW: Tranzila.configuration.tranzila_pw,
         CreditPass: Tranzila.configuration.credit_pass
       }
